@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Verticaal centreren */
+    background: #999999;
+    height: 100vh; /* Zorg ervoor dat de body de volledige hoogte van het scherm inneemt */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Voeg schaduw toe voor een moderne look */
+}
+
+.symbolcont {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.sign-in-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: rgb(15, 20, 25);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(226, 223, 223);
+    border-radius: 24px;
+    background-color: white;
+    padding: 0.5rem 3rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button img {
+    margin-right: 1rem;
+    max-width: 24px;
+    max-height: 24px;
+}
+
+button p {
+    margin: 0;
+}
+
+button:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    margin: 0.8rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid rgb(201, 196, 196);
+    border-radius: 24px;
+    transition: border 0.3s;
+}
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #1d9bf0;
+}
+
+input::placeholder {
+    color: #888;
+    opacity: 1; /* Firefox */
+}
+
+input:-ms-input-placeholder {
+    color: #888;
+}
+
+input::-ms-input-placeholder {
+    color: #888;
+}
+
+#next {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 24px;
+    padding: 0.5rem 4rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    transition: background-color 0.3s;
+}
+
+#next:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+#forgot {
+    background-color: white;
+    border: 1px solid rgb(204, 201, 201);
+    border-radius: 24px;
+    padding: 0.5rem 4rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    transition: background-color 0.3s;
+}
+
+#forgot:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+#signup {
+    color: gray;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#signup a {
+    color: #1d9bf0;
+    text-decoration: none;
+}
+
+button.d-none {
+    display: none;
+}
+
+button.d-block {
+    display: block;
+}

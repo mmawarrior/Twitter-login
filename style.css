@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #f5f8fa;
+    height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left-column {
+    width: 20%;
+    padding: 20px;
+    background-color: #1da1f2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-container img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.left-column nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.left-column nav ul li {
+    margin: 15px 0;
+}
+
+.left-column nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.left-column nav ul li a i {
+    margin-right: 10px;
+}
+
+.left-column nav ul li a .text {
+    font-size: 18px;
+}
+
+.left-column nav ul li a:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+    color: #043e64;
+}
+
+.tweet-button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tweet-button button {
+    background-color: #0068a8;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.tweet-button button:hover {
+    background-color: #03578f;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.profile-header {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-header {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.profile-banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-top: -60px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #ffffff;
+    background: #f0f0f0;
+    margin-right: 20px;
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex-grow: 1;
+    color: #333;
+}
+
+.profile-details h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.profile-details p a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+.profile-details p a:hover {
+    text-decoration: underline;
+}
+
+#userHandle {
+    display: none;
+}
+
+.tweet-box {
+    margin-bottom: 20px;
+}
+
+.tweet-box textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #e1e8ed;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.tweet-box button {
+    background-color: #1da1f2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.tweet-box button:hover {
+    background-color: #0d8ae0;
+}
+
+.tweet-feed {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #e1e8ed;
+    padding: 10px 0;
+}
+
+.tweet img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tweet-content {
+    flex-grow: 1;
+}
+
+.tweet-header {
+    font-weight: bold;
+}
+
+.tweet-body {
+    margin-top: 5px;
+}
+
+.delete-tweet-btn {
+    background: none;
+    border: none;
+    color: #e0245e;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.right-column {
+    width: 20%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #e1e8ed;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+.trending-topics, .who-to-follow {
+    margin-bottom: 20px;
+}
+
+.trending-topics h2, .who-to-follow h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.trending-topics ul, .who-to-follow ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.trending-topics ul li, .who-to-follow ul li {
+    margin: 10px 0;
+}
+
+.trending-topics ul li a, .who-to-follow ul li a {
+    text-decoration: none;
+    color: #1da1f2;
+    font-size: 16px;
+}
+
+.trending-topics ul li a:hover, .who-to-follow ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 34px; /* Adjusted from 15px to 20px */
+    left: 38px; /* Adjusted from 15px to 20px */
+}
+
+.menu__btn span,
+.menu__btn span::before,
+.menu__btn span::after {
+    display: block;
+    background-color: #000;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    transition: transform 0.5s ease;
+}
+
+.menu__btn span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__toggle {
+    display: none;
+}
+
+.menu__toggle:checked + .menu__btn span {
+    transform: rotate(45deg);
+}
+
+.menu__toggle:checked + .menu__btn span::before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.menu__toggle:checked + .menu__btn span::after {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.menu__box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    left: 48px; /* Adjusted from 15px to 20px */
+    background: #1da1f2;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none; /* Initially hide the menu */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition for menu box */
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.menu__toggle:checked + .menu__btn + .menu__box {
+    display: flex; /* Show the menu when checkbox is checked */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu__item {
+    padding: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transition for menu items */
+}
+
+.menu__item i {
+    margin-right: 10px;
+}
+
+.menu__item:hover {
+    color: #043e64;
+    border-radius: 4px;
+    transform: scale(1.05); /* Add a slight scale effect on hover */
+}
+
+@media (min-width: 960px) {
+    .hamburger-menu {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    .left-column {
+        width: 20%;
+    }
+
+    .main-content {
+        width: 60%;
+    }
+
+    .right-column {
+        width: 20%;
+    }
+
+    .profile-info {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile-picture-container {
+        width: 120px;
+        height: 120px;
+        margin-right: 20px;
+    }
+
+    .profile-details {
+        text-align: left;
+        padding: 0 20px;
+    }
+
+    .profile-details h1 {
+        font-size: 24px;
+    }
+
+    .profile-details p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 960px) {
+    .left-column,
+    .right-column {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .profile-info {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile-picture-container {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+
+    .profile-details {
+        text-align: left;
+    }
+
+    .profile-details h1 {
+        font-size: 20px;
+    }
+
+    .profile-details p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .text {
+        display: none;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-picture-container {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .profile-details {
+        text-align: center;
+    }
+
+    .profile-details h1 {
+        font-size: 20px;
+    }
+
+    .profile-details p {
+        font-size: 14px;
+    }
+}

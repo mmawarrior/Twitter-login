@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to X</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="./login.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="symbolcont">
+        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M17.751 3h3.067l-6.7 7.625L22 21h-6.172l-4.833-6.293L5.464 21h-3.07l7.167-8.155L2 3h6.328l4.37 5.752zm-1.076 16.172h1.7L7.404 4.732H5.58z"/>
+        </svg>
+    </div>
+    <div class="sign-in-text">Sign in to X</div>
+    <button id="google-sign">
+        <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="google logo">
+        <p>Sign in with Google</p> 
+    </button>
+    <button id="apple-sign">
+        <img src="https://img.icons8.com/?size=100&id=30840&format=png&color=000000" alt="apple logo">
+        <p>Sign in with Apple</p> 
+    </button>
+    <form id="LoginForm">
+        <input type="email" id="emailInp" placeholder="Phone, email or username" aria-label="Phone, email or username" value="box2@box.nl" required>
+        <input type="password" id="passwordInp" placeholder="Password" aria-label="Password" value="box2@box.nl" required>
+        <input id="next" type="submit" value="Next">
+        <input id="forgot" type="button" value="Forgot password">
+    </form>
+    <p id="signup">Don't have an account? <a href="./register.html">Sign Up</a></p>
+</div>
+</body>
+</html>
