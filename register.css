@@ -10,9 +10,10 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center; /* Verticaal centreren */
-    background: #999999;
-    height: 100vh; /* Zorg ervoor dat de body de volledige hoogte van het scherm inneemt */
+    align-items: center;
+    background: #f0f0f0; /* Lighter background for contrast */
+    height: 100vh;
+    padding: 10px; /* Add padding to ensure space on small screens */
 }
 
 .container {
@@ -24,51 +25,41 @@ body {
     border-radius: 12px;
     background: #ffffff;
     width: 100%;
-    max-width: 500px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Voeg schaduw toe voor een moderne look */
+    max-width: 400px; /* Adjusted max width */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
 }
 
 .symbolcont {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Increased space for better alignment */
 }
 
 .sign-in-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: rgb(15, 20, 25);
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem; /* Adjusted space for improved balance */
 }
 
 button {
-    font-family: 'Poppins', sans-serif;
     display: flex;
+    justify-content: center;
     align-items: center;
-    border: 1px solid rgb(226, 223, 223);
+    border: none;
     border-radius: 24px;
-    background-color: white;
-    padding: 0.5rem 3rem;
+    background-color: #1e3a8a; /* Updated button color */
+    color: white;
+    padding: 0.8rem 2rem;
     margin: 1rem 0;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-button img {
-    margin-right: 1rem;
-    max-width: 24px;
-    max-height: 24px;
-}
-
-button p {
-    margin: 0;
+    font-size: 1.1rem; /* Slightly larger font for readability */
+    transition: background-color 0.3s, transform 0.3s; /* Added transform for interactivity */
 }
 
 button:hover {
-    background-color: #f5f5f5;
-    cursor: pointer;
+    background-color: #334ead; /* Darker on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
 }
 
 form {
@@ -93,63 +84,65 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 
 input::placeholder {
     color: #888;
-    opacity: 1; /* Firefox */
-}
-
-input:-ms-input-placeholder {
-    color: #888;
-}
-
-input::-ms-input-placeholder {
-    color: #888;
 }
 
 #next {
     background-color: black;
     color: white;
-    border: 1px solid black;
+    border: none;
     border-radius: 24px;
-    padding: 0.5rem 4rem;
+    padding: 0.7rem 0;
     font-weight: bold;
     margin: 1rem 0;
-    transition: background-color 0.3s;
+    font-size: 1rem; /* Standardized button text size */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #next:hover {
     background-color: #333;
-    cursor: pointer;
-}
-
-#forgot {
-    background-color: white;
-    border: 1px solid rgb(204, 201, 201);
-    border-radius: 24px;
-    padding: 0.5rem 4rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-    transition: background-color 0.3s;
-}
-
-#forgot:hover {
-    background-color: #f5f5f5;
-    cursor: pointer;
+    transform: translateY(-2px);
 }
 
 #signup {
     color: gray;
     margin-top: 2rem;
     text-align: center;
+    font-size: 0.9rem; /* Smaller font for footer links */
 }
 
 #signup a {
     color: #1d9bf0;
     text-decoration: none;
+    font-weight: 500;
 }
 
-button.d-none {
-    display: none;
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem; /* Slightly smaller padding on smaller screens */
+    }
+
+    .sign-in-text {
+        font-size: 1.6rem; /* Adjusted font size for better fit */
+    }
+
+    button {
+        font-size: 1rem; /* Standardized button text size */
+        padding: 0.7rem 1.5rem; /* Adjusted padding for smaller screens */
+    }
 }
 
-button.d-block {
-    display: block;
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem; /* Smaller padding for very small screens */
+        max-width: 90%; /* Use more screen width */
+    }
+
+    .sign-in-text {
+        font-size: 1.4rem; /* Smaller heading on smallest screens */
+    }
+
+    button {
+        font-size: 0.9rem; /* Smaller button text */
+        padding: 0.6rem 1rem; /* More compact buttons */
+    }
 }
